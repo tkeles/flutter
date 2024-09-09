@@ -156,7 +156,6 @@ class _InvoiceDeliveryScreenState extends State<InvoiceDeliveryScreen> with Sing
     DateTime selectedDate = DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day);
 
     if (selectedDate != today) {
-      print('Seçilen tarih: $selectedDate');
       bool passwordCorrect = await _showPasswordDialog();
       if (!passwordCorrect) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Неверный пароль')));
